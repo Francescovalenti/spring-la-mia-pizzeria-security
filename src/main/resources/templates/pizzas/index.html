@@ -9,7 +9,7 @@
     <link rel="stylesheet" th:href="@{/webjars/bootstrap/5.3.6/css/bootstrap.min.css}" />
     <link rel="stylesheet" th:href="@{/css/style.css}">
 </head>
-</head>
+
 
 <body>
     <header>
@@ -23,7 +23,7 @@
         </section>
         <section class="search-bar row justify-content-center mb-3">
             <form th:action="@{/pizzas}" method="POST" class="col-12 d-flex justify-content-between">
-                <div class="creation-button">
+                <div class="creation-button" sec:authorize="hasAuthority('ADMIN')">
                     <a th:href="@{/pizzas/create}" class="btn btn-warning ">Crea una nuova pizza</a>
                 </div>
 
@@ -63,8 +63,8 @@
 
                         <td th:text="${#numbers.formatCurrency(pizza.price)}">€ 0.00</td>
                         <td><a th:href="@{/pizzas/{id}(id=${pizza.id})}" class="btn btn-primary btn-sm">Dettagli</a>
-                            <a th:href="@{/pizzas/edit/{id}(id=${pizza.id})}" class="btn btn-warning btn-sm">Edit</a>
-                            <button type="button" class="d-inline btn btn-danger btn-sm" data-bs-toggle="modal"
+                            <a th:href="@{/pizzas/edit/{id}(id=${pizza.id})}" sec:authorize="hasAuthority('ADMIN')">" class="btn btn-warning btn-sm">Edit</a>
+                            <button sec:authorize="hasAuthority('ADMIN')" type="button" class="d-inline btn btn-danger btn-sm" data-bs-toggle="modal"
                                 th:data-bs-target="'#delete-modal-' + *{id}">
                                 Delete
                             </button>
