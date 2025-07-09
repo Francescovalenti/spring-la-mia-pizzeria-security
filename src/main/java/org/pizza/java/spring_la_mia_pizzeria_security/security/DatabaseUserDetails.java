@@ -1,7 +1,7 @@
-package org.pizza.java.spring_la_mia_pizzeria_relazioni.Security;
+package org.pizza.java.spring_la_mia_pizzeria_security.security;
 
-import org.pizza.java.spring_la_mia_pizzeria_relazioni.model.Role;
-import org.pizza.java.spring_la_mia_pizzeria_relazioni.model.User;
+import org.pizza.java.spring_la_mia_pizzeria_security.model.Role;
+import org.pizza.java.spring_la_mia_pizzeria_security.model.User;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;

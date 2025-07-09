@@ -1,8 +1,8 @@
-package org.pizza.java.spring_la_mia_pizzeria_relazioni.controller;
+package org.pizza.java.spring_la_mia_pizzeria_security.controller;
 
-import org.pizza.java.spring_la_mia_pizzeria_relazioni.model.Pizza;
-import org.pizza.java.spring_la_mia_pizzeria_relazioni.repository.PizzaRepository;
-import org.pizza.java.spring_la_mia_pizzeria_relazioni.repository.IngredientRepository;
+import org.pizza.java.spring_la_mia_pizzeria_security.model.Pizza;
+import org.pizza.java.spring_la_mia_pizzeria_security.repository.IngredientRepository;
+import org.pizza.java.spring_la_mia_pizzeria_security.repository.PizzaRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Controller;

@@ -1,4 +1,4 @@
-package org.pizza.java.spring_la_mia_pizzeria_relazioni.Security;
+package org.pizza.java.spring_la_mia_pizzeria_security.security;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
